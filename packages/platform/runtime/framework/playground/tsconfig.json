@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "paths": {
+      "playground/*": [
+        "../../template/playground/*"
+      ]
+    },
+    "sourceMap": true,
+    "types": [
+      "vite/client"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+// Последняя стабильная версия ts-node не поддерживает множественный extends из TypeScript 5 чтобы использовать tsconfig.json.
+// https://github.com/TypeStrong/ts-node/issues/2000
+{
+  "extends": "./tsconfig.part.strict.json",
+  "compilerOptions": {
+    "noEmitOnError": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "verbatimModuleSyntax": true,
+    "lib": [
+      "ES2022"
+    ],
+    "target": "ES2022"
+  }
+}

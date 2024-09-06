@@ -1,0 +1,11 @@
+{
+  "name": "@skbkontur/https-test-certificate",
+  "version": "1.0.1",
+  "description": "Сертификаты для локального разворачивания фронта на https",
+  "main": "index.js",
+  "keywords": [
+    "cert"
+  ],
+  "author": "original001",
+  "license": "ISC"
+}

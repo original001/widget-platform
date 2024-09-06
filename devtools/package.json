@@ -1,0 +1,24 @@
+{
+  "name": "@skbkontur/devtools",
+  "version": "1.0.0",
+  "author": "asorokin",
+  "type": "module",
+  "bin": {
+    "devtools": "./cli.js"
+  },
+  "exports": {
+    ".": {}
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "sideEffects": false,
+  "private": true,
+  "dependencies": {
+    "fast-xml-parser": "^4.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "typescript": "^5.3.3"
+  }
+}

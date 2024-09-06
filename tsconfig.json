@@ -1,0 +1,18 @@
+// Определяет все правила для ноды, одинаковые для всего исполняемого кода на node20
+// tsconfig.json для браузерного кода и библиотек ниже по дереву каталогов
+{
+  "extends": [
+    "./tsconfig.part.strict.json",
+    "./tsconfig.part.target.node.json"
+  ],
+  "compilerOptions": {
+    "noEmitOnError": true,
+    "verbatimModuleSyntax": true,
+    "noPropertyAccessFromIndexSignature": true
+  },
+  "ts-node": {
+    // Node20 hides unexpected errors without this
+    // https://github.com/TypeStrong/ts-node/issues/2026
+    "transpileOnly": true
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "../../../../tsconfig.part.strict.json",
+    "../../../../tsconfig.part.type.lib.json",
+    "../../../../tsconfig.part.target.vite.json"
+  ],
+  "compilerOptions": {
+    "outDir": "../../dist/node",
+    "verbatimModuleSyntax": true,
+    "paths": {
+      "vscode-languageserver/node": [
+        "./fake.js"
+      ]
+    }
+  },
+  "files": [
+    "index.ts"
+  ]
+}

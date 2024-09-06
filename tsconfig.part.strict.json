@@ -1,0 +1,21 @@
+// Вообще для всего кода в репозитории, за исключением случаев, когда код должен работать в скопированном виде вне репозитория, когда корня нет (platform и template)
+{
+  "compilerOptions": {
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "isolatedModules": true,
+    "exactOptionalPropertyTypes": true,
+    // https://github.com/microsoft/TypeScript/issues/55221
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "useDefineForClassFields": true,
+    "skipLibCheck": true // только для демонстрации
+  }
+}

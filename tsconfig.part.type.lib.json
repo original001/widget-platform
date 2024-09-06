@@ -1,0 +1,11 @@
+// Для всех собираемых и публикуемых библиотек (tgz-пакетов)
+{
+    "compilerOptions": {
+      "declaration": true,
+      "declarationMap": true,
+      "inlineSources": true,
+      "noEmitOnError": true,
+      "sourceMap": true,
+      "noPropertyAccessFromIndexSignature": true
+    }
+}

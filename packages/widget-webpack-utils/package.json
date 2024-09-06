@@ -1,0 +1,57 @@
+{
+  "name": "@skbkontur/widget-webpack-utils",
+  "version": "3.0.1",
+  "author": "asorokin",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/lib/index.d.ts",
+        "default": "./dist/cjs/lib/index.js"
+      }
+    }
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "@skbkontur/operation-result": "^1.6.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@react-hookz/web": "^23.1.0",
+    "@skbkontur/devtools": "^1.0.0",
+    "@skbkontur/loader-builder": "^8.0.0",
+    "@skbkontur/react-ui": "^4.19.0",
+    "@skbkontur/widget-consumer-react-utils": "^1.4.3",
+    "@skbkontur/widget-playground": "^0.10.3",
+    "@types/react": "^18.0.38",
+    "@types/react-dom": "^18.0.11",
+    "cross-env": "^7.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-error-boundary": "^4.0.11",
+    "source-map-loader": "^5.0.0",
+    "ts-loader": "^9.4.2",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.3",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.3"
+  },
+  "peerDependencies": {
+    "webpack": "^5.79.0"
+  },
+  "scripts": {
+    "build": "devtools copy-esm-to-cjs && tsc && devtools monorepo-pack",
+    "start": "cross-env TS_NODE_PROJECT=\"../../tsconfig.ts-node.json\" node --no-warnings=ExperimentalWarning --loader ts-node/esm ../../node_modules/webpack/bin/webpack.js serve --config server/webpack.config.ts",
+    "build-test": "cross-env TS_NODE_PROJECT=\"../../tsconfig.ts-node.json\" node --no-warnings=ExperimentalWarning --loader ts-node/esm ../../node_modules/webpack/bin/webpack.js --config server/webpack.config.ts --env production",
+    "test": "npx playwright install --with-deps && playwright test --config ./playwright.config.ts"
+  },
+  "license": "MIT",
+  "files": [
+    "dist"
+  ]
+}

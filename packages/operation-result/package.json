@@ -1,0 +1,31 @@
+{
+  "name": "@skbkontur/operation-result",
+  "version": "1.6.0",
+  "author": "asorokin",
+  "type": "module",
+  "main": "./dist/cjs/lib/index.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/lib/index.d.ts",
+        "default": "./dist/cjs/lib/index.js"
+      }
+    }
+  },
+  "sideEffects": false,
+  "devDependencies": {
+    "@skbkontur/devtools": "^1.0.0",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "build": "devtools copy-esm-to-cjs && tsc && devtools monorepo-pack"
+  },
+  "license": "MIT",
+  "files": [
+    "dist"
+  ]
+}

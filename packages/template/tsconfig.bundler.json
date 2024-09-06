@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.strict.json",
+  "compilerOptions": {
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "noEmit": true,
+    "sourceMap": true,
+    "lib": [
+      "ES2019",
+      "DOM"
+    ],
+    "target": "ESNext"
+  }
+}

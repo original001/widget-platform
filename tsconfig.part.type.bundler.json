@@ -1,0 +1,7 @@
+// Для кода, обрабатываемого бандлером
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "verbatimModuleSyntax": true
+  }
+}

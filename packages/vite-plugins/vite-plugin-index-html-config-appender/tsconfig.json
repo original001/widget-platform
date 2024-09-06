@@ -1,0 +1,7 @@
+{
+  "extends": "../tsconfig.vite-plugins.json",
+  "compilerOptions": {
+    "outDir": "./dist"
+  },
+  "files": ["esm/index.ts"]
+}

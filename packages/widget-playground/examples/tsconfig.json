@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "../../../tsconfig.part.strict.json",
+    "../../../tsconfig.part.type.bundler.json",
+    "../../../tsconfig.part.target.browser.json"
+  ],
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "types": [
+      "vite/client"
+    ]
+  },
+  "include": [
+    "*/**.stories.*"
+  ]
+}

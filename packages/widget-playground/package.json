@@ -1,0 +1,56 @@
+{
+  "name": "@skbkontur/widget-playground",
+  "version": "0.10.3",
+  "author": "asorokin",
+  "type": "module",
+  "main": "./dist/cjs/lib/index.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/lib/index.d.ts",
+        "default": "./dist/cjs/lib/index.js"
+      }
+    }
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "@react-hookz/web": "^23.1.0",
+    "@skbkontur/loader-builder": "^8.0.0",
+    "@skbkontur/operation-result": "^1.6.0",
+    "@skbkontur/widget-consumer-react-utils": "^1.4.3"
+  },
+  "peerDependencies": {
+    "@types/react": ">=16.9",
+    "react": ">=16.9"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@skbkontur/devtools": "^1.0.0",
+    "@skbkontur/mini-skeleton": "^0.1.1",
+    "@skbkontur/react-ui": "^4.19.0",
+    "@skbkontur/react-ui-validations": "^1.13.1",
+    "@storybook/addon-essentials": "^7.5.3",
+    "@storybook/react": "^7.5.3",
+    "@storybook/react-vite": "^7.5.3",
+    "@types/react-dom": "^18.0.11",
+    "react-dom": "^18.2.0",
+    "react-error-boundary": "^4.0.11",
+    "serve": "^14.2.0",
+    "storybook": "^7.5.3",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "build": "devtools copy-esm-to-cjs && tsc && devtools monorepo-pack",
+    "storybook": "storybook dev -p 6006 --https --ssl-cert ../https-test-certificate/pem/cert.crt --ssl-key ../https-test-certificate/pem/server.key",
+    "storybook-preview": "storybook build && serve -l 6006 --ssl-cert ../https-test-certificate/pem/cert.crt --ssl-key ../https-test-certificate/pem/server.key",
+    "test": "npx playwright install --with-deps && playwright test --config ./playwright.config.ts"
+  },
+  "license": "MIT",
+  "files": [
+    "dist"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "extends": "../tsconfig.bundler.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "types": [
+      "vite/client"
+    ]
+  },
+  "files": ["./index.tsx", "./environmentConfigs.ts"]
+}

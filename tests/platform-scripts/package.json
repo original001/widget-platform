@@ -1,0 +1,52 @@
+{
+  "name": "platform-scripts-npm-loader",
+  "version": "0.0.1",
+  "type": "module",
+  "sideEffects": false,
+  "author": "original001",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./.artifacts/npm-loader/framework/entry.d.ts",
+        "default": "./.artifacts/npm-loader/framework/entry.js"
+      }
+    }
+  },
+  "files": [
+    ".artifacts/npm-loader/*",
+    "!.artifacts/npm-loader/internal"
+  ],
+  "dependencies": {
+    "@types/react": "^18.0.38",
+    "@types/react-dom": "^18.0.11",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@skbkontur/loader-builder": "*",
+    "@skbkontur/operation-result": "*",
+    "@skbkontur/react-ui": "^4.19.0",
+    "@skbkontur/widget-consumer-react-utils": "*",
+    "@skbkontur/widget-platform": "*",
+    "@skbkontur/widget-playground": "*",
+    "csp-header": "^5.2.1",
+    "react-error-boundary": "^4.0.11",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "build-loader": "widget-platform build-npm-loader && npm pack --pack-destination .artifacts",
+    "build": "widget-platform build",
+    "preview": "widget-platform preview",
+    "start": "widget-platform start",
+    "watch": "widget-platform watch",
+    "serve": "serve -l 6006",
+    "test-dev": "playwright test --config ./playwright/playwright.dev.config.ts",
+    "test-preview": "playwright test --config ./playwright/playwright.preview.config.ts",
+    "test-serve": "playwright test --config ./playwright/playwright.serve.config.ts",
+    "test-serve-with-build": "npm run build && npm run test-serve",
+    "test-watch": "playwright test --config ./playwright/playwright.watch.config.ts",
+    "test": "npx playwright install --with-deps && npm run test-dev && npm run test-watch && npm run test-serve-with-build && npm run test-preview"
+  }
+}

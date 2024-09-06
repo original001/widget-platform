@@ -1,0 +1,1 @@
+window.__MOBX_DEVTOOLS_GLOBAL_HOOK__ = window.parent.__MOBX_DEVTOOLS_GLOBAL_HOOK__;

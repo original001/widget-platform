@@ -1,0 +1,28 @@
+{
+  "name": "@skbkontur/vite-plugin-index-html-cloner",
+  "version": "0.3.0",
+  "author": "asorokin",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "sideEffects": false,
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "vite": ">= 4.3.8"
+  },
+  "scripts": {
+    "build": "tsc && devtools monorepo-pack"
+  },
+  "license": "MIT",
+  "files": [
+    "dist"
+  ]
+}

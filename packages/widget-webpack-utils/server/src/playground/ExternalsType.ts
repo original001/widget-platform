@@ -1,0 +1,15 @@
+export enum ExternalsType {
+  ModuleEsmLazy = "externalsTypeModuleEsmLazy",
+  ModuleEsm = "externalsTypeModuleEsm",
+  ModuleLazy = "externalsTypeModuleLazy",
+  Module = "externalsTypeModule",
+  WindowEsmLazy = "externalsTypeWindowEsmLazy",
+  WindowEsm = "externalsTypeWindowEsm",
+  WindowLazy = "externalsTypeWindowLazy",
+  Window = "externalsTypeWindow",
+  ClosureLazy = "externalsTypeClosureLazy",
+  Closure = "externalsTypeClosure",
+  ClosureDuplicateLazy = "externalsTypeClosureDuplicateLazy",
+  ClosureDuplicate = "externalsTypeDuplicateClosure",
+  Duplicate = "externalsTypeDuplicate",
+}

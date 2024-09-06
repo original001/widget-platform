@@ -1,0 +1,25 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "paths": {
+      "jsLoader": [
+        "../template/jsLoader/index.ts"
+      ],
+      "/jsLoaderExternals.js": [
+        "../template/jsLoader/jsLoaderExternals.ts"
+      ],
+      "widget": [
+        "../template/widget/index.tsx"
+      ]
+    },
+    "sourceMap": true,
+    "types": [
+      "vite/client"
+    ]
+  },
+  "include": [
+    "jsLoader",
+    "widget"
+  ]
+}

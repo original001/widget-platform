@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json",
+  "version": "independent",
+  "command": {
+    "version": {
+      "ignoreChanges": ["*.stories.*", "*.md"],
+      "message": "chore(release): prepare to release"
+    }
+  },
+  "packages": ["packages/*", "packages/vite-plugins/*"]
+}

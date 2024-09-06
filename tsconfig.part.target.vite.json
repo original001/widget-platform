@@ -1,0 +1,11 @@
+// Для кода, который будет исполняться в конфиге Vite
+{
+  "compilerOptions": {
+    "lib": [
+      "ES2022",
+      // в esbuild есть использования типа WebAssembly, для браузерного esbuild-а, в vite есть WebSocker и Worker
+      "DOM"
+    ],
+    "target": "ES2022"
+  }
+}

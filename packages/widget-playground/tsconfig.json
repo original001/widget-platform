@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "../../tsconfig.part.strict.json",
+    "../../tsconfig.part.type.lib.json",
+    "../../tsconfig.part.target.browser.json"
+  ],
+  "compilerOptions": {
+    "outDir": "./dist",
+    "jsx": "react-jsx"
+  },
+  "files": [
+    "esm/index.ts",
+    "cjs/lib/index.ts"
+  ]
+}

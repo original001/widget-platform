@@ -1,0 +1,5 @@
+{
+  "public": "storybook-static",
+  "cleanUrls": false,
+  "rewrites": [ {"source": "/", "destination": "/index.html" }]
+}

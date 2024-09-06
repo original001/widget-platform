@@ -1,0 +1,55 @@
+{
+  "name": "@skbkontur/widget-consumer-react-utils",
+  "version": "1.4.3",
+  "author": "asorokin",
+  "type": "module",
+  "main": "./dist/cjs/lib/index.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/lib/index.d.ts",
+        "default": "./dist/cjs/lib/index.js"
+      }
+    }
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "@skbkontur/operation-result": "^1.6.0"
+  },
+  "peerDependencies": {
+    "@types/react": ">=16.9",
+    "react": ">=16.9"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@react-hookz/web": "^23.1.0",
+    "@skbkontur/devtools": "^1.0.0",
+    "@skbkontur/loader-builder": "^8.0.0",
+    "@storybook/addon-essentials": "^7.5.3",
+    "@storybook/addon-interactions": "^7.5.3",
+    "@storybook/jest": "^0.2.3",
+    "@storybook/react": "^7.5.3",
+    "@storybook/react-vite": "^7.5.3",
+    "@storybook/testing-library": "^0.2.2",
+    "@types/react-dom": "^18.0.11",
+    "react-dom": "^18.2.0",
+    "react-error-boundary": "^4.0.11",
+    "serve": "^14.2.0",
+    "storybook": "^7.5.3",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "build": "devtools copy-esm-to-cjs && tsc && devtools monorepo-pack",
+    "storybook": "storybook dev -p 6006",
+    "storybook-preview": "storybook build && serve -l 6006",
+    "test": "npx playwright install --with-deps && playwright test --config ./playwright.config.ts"
+  },
+  "license": "MIT",
+  "files": [
+    "dist"
+  ]
+}

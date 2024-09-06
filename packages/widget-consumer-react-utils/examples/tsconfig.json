@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "../../../tsconfig.part.strict.json",
+    "../../../tsconfig.part.target.browser.json"
+  ],
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "noEmit": true,
+    "sourceMap": true
+  }
+}

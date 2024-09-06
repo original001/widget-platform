@@ -1,0 +1,42 @@
+:global body {
+    font:
+        14px "Lab Grotesque K",
+        "Lab Grotesque",
+        -apple-system,
+        "BlinkMacSystemFont",
+        Arial,
+        "Liberation Sans",
+        "Nimbus Sans L",
+        sans-serif;
+    font-feature-settings: "tnum";
+    -webkit-font-feature-settings: "tnum";
+    -moz-font-feature-settings: "tnum";
+    color: #222;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+:local .widgetContainer {
+    box-sizing: border-box;
+    position: relative;
+    width: 1054px;
+    min-height: 500px;
+    margin: 16px;
+    border: lightgray solid 3px;
+    overflow: hidden;
+}
+:local .buttonContainer {
+    box-sizing: border-box;
+    display: flex;
+    margin: 16px;
+}
+
+:local .faultContainer {
+    box-sizing: border-box;
+    width: 1054px;
+    border: orangered solid 3px;
+    margin: 16px;
+    padding: 8px;
+}

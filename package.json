@@ -1,0 +1,49 @@
+{
+  "type": "module",
+  "workspaces": [
+    "devtools",
+    "packages/operation-result",
+    "packages/loader-builder",
+    "packages/widget-webpack-utils",
+    "packages/vite-plugins/*",
+    "packages/platform",
+    "packages/widget-consumer-react-utils",
+    "packages/widget-playground",
+    "packages/*",
+    "tests/*"
+  ],
+  "private": true,
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "postinstall": "npx simple-git-hooks",
+    "prepare-publish": "lerna version --conventional-commits --changelog-preset conventionalcommits",
+    "test": "npm run test --workspaces --if-present",
+    "version": "lerna exec \"npm install --ignore-scripts --package-lock-only --no-audit\" && git add package-lock.json"
+  },
+  "author": "original001",
+  "devDependencies": {
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
+    "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+    "conventional-changelog-conventionalcommits": "^7.0.2",
+    "lerna": "^7.3.1",
+    "nano-staged": "^0.8.0",
+    "prettier": "^3.0.0",
+    "simple-git-hooks": "^2.8.1"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "nano-staged": {
+    "*.{js,jsx,ts,tsx}": "prettier --write"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "./node_modules/.bin/nano-staged",
+    "commit-msg": "./node_modules/.bin/commitlint --edit \"$@\""
+  },
+  "overrides": {
+    "rollup-plugin-sourcemaps": {
+      "rollup": "^4"
+    }
+  }
+}

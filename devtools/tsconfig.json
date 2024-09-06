@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "../tsconfig.part.strict.json",
+    "../tsconfig.part.type.lib.json",
+    "../tsconfig.part.target.node.json"
+  ],
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist"
+  },
+  "include": [
+    "src"
+  ]
+}

@@ -1,0 +1,14 @@
+// Определяет все правила для ноды, одинаковые для всего кода на node
+// tsconfig.json для браузерного кода ниже по дереву каталогов
+{
+  "extends": "./tsconfig.strict.json",
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "noPropertyAccessFromIndexSignature": true,
+    "lib": [
+      "ES2022"
+    ]
+  }
+}

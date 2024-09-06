@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "../../../tsconfig.part.strict.json",
+    "../../../tsconfig.part.type.bundler",
+    "../../../tsconfig.part.target.browser.json"
+  ],
+  "compilerOptions": {
+    "jsx": "react-jsx"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "verbatimModuleSyntax": true
+  },
+  "extends": [
+    "../../../tsconfig.part.strict",
+    "../../../tsconfig.part.type.lib.json",
+    "../../../tsconfig.part.target.browser.json"
+  ]
+}

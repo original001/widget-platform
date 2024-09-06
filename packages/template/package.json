@@ -1,0 +1,45 @@
+{
+  "name": "@skbkontur/widget-platform-template-npm-loader",
+  "version": "0.16.2",
+  "description": "npm loader for template widget",
+  "author": "original001",
+  "type": "module",
+  "sideEffects": false,
+  "license": "MIT",
+  "exports": "./.artifacts/npm-loader/framework/entry.js",
+  "files": [
+    ".artifacts/npm-loader/*",
+    "!.artifacts/npm-loader/internal"
+  ],
+  "scripts": {
+    "start": "widget-platform start",
+    "build": "widget-platform build",
+    "preview": "widget-platform preview"
+  },
+  "dependencies": {
+    "@skbkontur/loader-builder": "^8.0.0",
+    "@skbkontur/operation-result": "^1.6.0",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@react-hookz/web": "^23.1.0",
+    "@skbkontur/react-ui": "^4.19.0",
+    "@skbkontur/react-ui-validations": "1.14.4",
+    "@skbkontur/widget-consumer-react-utils": "^1.4.3",
+    "@skbkontur/widget-platform": "^0.14.2",
+    "@skbkontur/widget-playground": "^0.10.3",
+    "csp-header": "^5.2.1",
+    "event-source-polyfill": "1.0.25",
+    "react-error-boundary": "^4.0.11",
+    "typescript": "^5.3.3"
+  },
+  "overrides": {
+    "es5-ext": "0.10.53"
+  },
+  "resolutions": {
+    "es5-ext": "0.10.53"
+  }
+}

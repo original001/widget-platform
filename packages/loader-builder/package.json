@@ -1,0 +1,37 @@
+{
+  "name": "@skbkontur/loader-builder",
+  "version": "8.0.0",
+  "author": "asorokin",
+  "type": "module",
+  "main": "./dist/cjs/lib/index.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/lib/index.d.ts",
+        "default": "./dist/cjs/lib/index.js"
+      }
+    }
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "@skbkontur/operation-result": "^1.6.0"
+  },
+  "devDependencies": {
+    "@skbkontur/devtools": "^1.0.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.6.0"
+  },
+  "scripts": {
+    "build": "devtools copy-esm-to-cjs && tsc && devtools monorepo-pack",
+    "watch": "devtools copy-esm-to-cjs && tsc --watch",
+    "test": "vitest run --reporter=default --reporter=junit --outputFile=../../junit.loader-builder.xml"
+  },
+  "license": "MIT",
+  "files": [
+    "dist"
+  ]
+}

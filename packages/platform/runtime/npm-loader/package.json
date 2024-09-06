@@ -1,0 +1,17 @@
+{
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./framework/entry.d.ts",
+        "default": "./framework/entry.js"
+      }
+    }
+  },
+  "sideEffects": false,
+  "license": "MIT",
+  "files": [
+    "*",
+    "!internal"
+  ]
+}
